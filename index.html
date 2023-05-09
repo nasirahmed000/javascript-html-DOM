@@ -4,82 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To DOM</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <style>
-        li{
-            color: tomato;
-        }
-        #fruits{
-            color: black;
-        }
-    </style>
+    <title>JS DOM EVENTS</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to DOM</h1>
-    </header>
-    <main>
-    <section>
-        <h1>
-            My awsome dom de Baba
-        </h1>
-        <ul>
-            <li>Jalali Set </li>
-            <li>Safayet</li>
-            <li>Bonobash</li>
-            <li>DOM de re Baba</li>
-        </ul>
-    </section>
-       <section>
-        <h1 id="Fruits">Fruits I like</h1>
-        <ul>
-            <li>Apple</li>
-            <li>Orange</li>
-            <li>Lemon</li>
-        </ul>
-       </section>
-       <section>
-        <h1>
-            Places I like to visit 
-        </h1>
-        <ul>
-            <li>Sylhet</li>
-            <li>Sundarban</li>
-            <li>kataban</li>
-        </ul>
-       </section>
-    </main>
-    <script src="js/dom.js"> </script>
-    <script src="js/styleInjs.js"></script>
+    <h1 onclick="console.log('I am clicked')">DOM er ajke special events</h1>
+    <button title="This is a tooltip" onclick="console.log(7)">Click Me</button>
+    <button onclick="console.log(65)">Another button</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='yellow'">Make Yellow</button>
+    <!-- option 2 -->
+    <button onclick="makeRed()">Make Red</button>
+    <!-- option 3 -->
+    <button id="make-blue">Make Blue</button>
+    <button id="make-purple">Make Purple</button>
+    <!-- option 4 -->
+    <button id="make-pink">Make Pink</button>
+    <button id="make-green">Make Green</button>
+    <button id="make-goldenrod">Make goldenRod</button>
+    <script src="js/events.js"></script>
     <script>
-        const liCollection = document.getElementsByTagName('li');
-        for(const li of liCollection){
-            console.log(li.innerText)
-        }
-        const allHeadings = document.getElementsByTagName('h1');
-        for (const h1 of allHeadings){
-            console.log(h1.innerText)
-        }
-          // option-2: getElementById
-          const fruitsTitle = document.getElementById('fruits-title');
-        fruitsTitle.innerText = 'Fruits changed by JS';
-
-        // option-3: getElementsByClassName
-        const places = document.getElementsByClassName('important-places');
-        for(const place of places){
-            // console.log(place.innerText)
-        }
-
-        // option-4: querySelector
         
-        // option-5: querySelectorAll
-        const someLi = document.querySelectorAll('.fruits-container li');
-        // console.log(someLi);
-        for(const li of someLi){
-            // console.log(li.innerText);
-        }
-
     </script>
 </body>
 </html>
